@@ -2,7 +2,7 @@ name: "abdr_staging_site"
 title: "ABDR Staging Site"
 description: |
   ABDR Staging Site
-output_dir: "_site"
+output_dir: "docs"
 navbar:
   right:
     - text: "Home"
