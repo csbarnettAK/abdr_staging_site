@@ -1,0 +1,25 @@
+---
+title: "Welcome to ABDR Staging Site"
+description: |
+  This is the staging website for the Alaska Birth Defects Registry (ABDR). Please visit the ABDR for all official reports on birth defects in Alaska.
+author:
+  - name: Alaska Birth Defects Registry (ABDR) 
+    url: https://dhss.alaska.gov/dph/wcfh/Pages/mchepi/abdr/default.aspx#:~:text=Established%20in%20January%201996%20under,defects%20born%20to%20Alaska%20residents.
+    affiliation: Alaska Department of Health and Social Services
+    affiliation_url: https://dhss.alaska.gov/Pages/default.aspx
+date: 03-25-2022
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating blogs with Distill at:
+# https://rstudio.github.io/distill/blog.html
+
+```
+
+
+

@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "This is the staging website for the Alaska Birth Defects Registry (ABDR). Please visit the ABDR for all official reports on birth defects in Alaska.",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-03-29T10:37:47-08:00"
+    },
+    {
+      "path": "index.html",
+      "title": "ABDR Staging Site",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-03-29T10:37:48-08:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

@@ -1,0 +1,9 @@
+---
+title: "About this site"
+description: |
+  This is the staging website for the Alaska Birth Defects Registry (ABDR). Please visit the ABDR for all official reports on birth defects in Alaska.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
