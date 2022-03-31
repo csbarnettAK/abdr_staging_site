@@ -1,8 +1,8 @@
 name: "abdr_staging_site"
-title: "ABDR Staging Site"
+title: "The Alaska Birth Defects Registry"
 description: |
   ABDR Staging Site
-output_dir: "docs"
+output_dir: "_site"
 navbar:
   right:
     - text: "Home"
