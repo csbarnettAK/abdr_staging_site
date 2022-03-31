@@ -1,15 +1,9 @@
 ---
-title: "Gastroschisis" 
-author: "Alaska Birth Defects Registry"
-date: "2007-2017"
-
- 
-
+title: "Gastroschisis 2007-2017"
+author: "The Alaska Birth Defects Registry"
 output:
-  html_document:
-    toc: yes
-    toc_float: yes
-   
+  distill::distill_article:
+    self_contained: false
 ---
 
 
@@ -54,8 +48,8 @@ For explanations of table columns [see Column descriptions](#column-descriptions
 ### Prevalence   
 Gastroschisis occurs in **4.5 out of every 10,000 live births in the United States.** This results in about 1,871 babies diagnosed with gastroschisis nationally each year.[[5]](#references)  
 
-
-```{r,echo=FALSE,warning=FALSE,comment=NA,message=FALSE}
+<center>
+```{r,echo=FALSE,warning=FALSE,comment=NA,message=FALSE, results='hide'}
 options(width=150)
 library(epitools)
 library(lubridate)  
@@ -90,20 +84,22 @@ rnames=c("2007-2009","2008-2010","2009-2011","2010-2012","2011-2013",
 load("R:\\ABDR\\Analysis_New\\ABDR_CASECONF\\cond_reports\\Published_reports\\abdr_website\\images\\ev2_GAS.RDa")
 
 ```
-
+</center>
 
 In Alaska, during `r datYRS[1]`, the prevalence of `r condition[1]` was **`r ev2[max(row.names(ev2)),4]` per 10,000 live births**. 
-<center>
 
+<center>
 ```{r warning=FALSE, comment=NA,message=FALSE,echo=FALSE}
 load("R:\\ABDR\\Analysis_New\\ABDR_CASECONF\\cond_reports\\Published_reports\\abdr_website\\images\\tmp_GAS.RData")
 tmp_GAS
 ```
+</center>
 
 ### Trend 
 Prevalence per 10,000 births of `r condition[1]` during `r datYRS[1]` by three-year moving averages, with 95% confidence interval band and Poisson estimated fitted line.
+
 <center>
-```{r warning=FALSE, echo=FALSE, message=FALSE, fig.width = 9, fig.height = 6, align}
+```{r echo=FALSE,warning=FALSE,comment=NA,message=FALSE}
 library(ggplot2)
 library(plotly)
 
@@ -111,28 +107,29 @@ library(plotly)
   
  load("R:\\ABDR\\Analysis_New\\ABDR_CASECONF\\cond_reports\\Published_reports\\abdr_website\\images\\trend_plot_GAS.RData")
  
+ trend_plot_GAS
+ 
  trend_GAS
  
- trend_plot_GAS
-
 ```
-
 </center>
+
+
 The p-value test for trend detected no significant increase or decrease in the number of live births with `r condition[1]` during `r datYRS[1]`. See [p-value estimate](#p-value-estimate)
+
 <center>
 ```{r warning=FALSE, echo=FALSE}
   load("R:\\ABDR\\Analysis_New\\ABDR_CASECONF\\cond_reports\\Published_reports\\abdr_website\\images\\p_val_GAS.RData")
 
 p_val_GAS
 ```  
-
-   
 </center>   
+
 ### Regional Distribution
 Distribution of `r condition[1]` in Alaska by Public Health Region of maternal residence at the time of birth. [A description of regional breakdowns can be found here](http://dhss.alaska.gov/dph/InfoCenter/Pages/ia/brfss/geography.aspx). Data suppressed for # of reports  < 6.   
 
 
-
+<center>
 ```{r, warning=FALSE, comment=NA, message=FALSE, echo=FALSE, fig.width = 8, fig.height = 6} 
 load("R:\\ABDR\\Analysis_New\\ABDR_CASECONF\\cond_reports\\Published_reports\\abdr_website\\images\\ggp_build_GAS.RData")
 ggp_build_GAS
@@ -141,8 +138,8 @@ load("R:\\ABDR\\Analysis_New\\ABDR_CASECONF\\cond_reports\\Published_reports\\ab
 geo_tbl_GAS
 
 ```
+</center>
 
-</center>  
 ### Demographics
 Some subgroups may be more at risk for having a baby with `r condition[1]`. This section provides the descriptive epidemiology of specified maternal, birth, and child characteristics identified from the birth certificate.  
   
@@ -151,8 +148,6 @@ Some subgroups may be more at risk for having a baby with `r condition[1]`. This
 load("R:\\ABDR\\Analysis_New\\ABDR_CASECONF\\cond_reports\\Published_reports\\abdr_website\\images\\demo_tbl_GAS.RData")
 demo_tbl_GAS
 ```  
-
-
 </center>
 
 ### Accompanying Diagnoses
