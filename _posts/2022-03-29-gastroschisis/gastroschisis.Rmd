@@ -99,7 +99,7 @@ tmp_GAS
 Prevalence per 10,000 births of `r condition[1]` during `r datYRS[1]` by three-year moving averages, with 95% confidence interval band and Poisson estimated fitted line.
 
 <center>
-```{r echo=FALSE,warning=FALSE,comment=NA,message=FALSE}
+```{r echo=FALSE,warning=FALSE, comment = NA, message = FALSE, layout="l-body-outset"}
 library(ggplot2)
 library(plotly)
 
@@ -130,7 +130,7 @@ Distribution of `r condition[1]` in Alaska by Public Health Region of maternal r
 
 
 <center>
-```{r, warning=FALSE, comment=NA, message=FALSE, echo=FALSE, fig.width = 8, fig.height = 6} 
+```{r, warning=FALSE, comment=NA, message=FALSE, echo=FALSE, layout="l-body-outset"} 
 load("R:\\ABDR\\Analysis_New\\ABDR_CASECONF\\cond_reports\\Published_reports\\abdr_website\\images\\ggp_build_GAS.RData")
 ggp_build_GAS
 
@@ -154,17 +154,19 @@ demo_tbl_GAS
 The ten diagnoses most commonalty associated with `r condition[1]`. 
 
 <center>  
-```{r warning=FALSE, comment=NA,message=FALSE, echo=FALSE, fig.width = 9, fig.height = 6} 
+```{r warning=FALSE, comment=NA,message=FALSE, echo=FALSE, layout="l-body-outset"} 
 load("R:/ABDR/Analysis_New/Published Data/secondary_diag_plots.Rda")
 
 
 
 sec_ii <- secondary_diag_plots[[paste0(code)]]
-sec_ii[["x"]][["data"]][[1]][["text"]] <- paste(
-                                               "<br>ICD-10 Description: ", sec_ii[["x"]][["layout"]][["yaxis"]][["ticktext"]],
-                                               # "<br>Number of diagnoses: ", other_diag,
-                                               "<br>Percentage of cases: ", sec_ii[["x"]][["data"]][[1]][["width"]])
+# sec_ii[["x"]][["data"]][[1]][["text"]] <- paste(
+#                                                "<br>ICD-10 Description: ", sec_ii[["x"]][["layout"]][["yaxis"]][["ticktext"]],
+#                                                # "<br>Number of diagnoses: ", other_diag,
+#                                                "<br>Percentage of cases: ", sec_ii[["x"]][["data"]][[1]][["width"]])
 
+sec_ii[["x"]][["data"]][[1]][["text"]] <- sec_ii[["x"]][["data"]][[1]][["text"]] %>%
+  str_replace(".*Description:", "Description:")
 sec_ii
 
 ```
