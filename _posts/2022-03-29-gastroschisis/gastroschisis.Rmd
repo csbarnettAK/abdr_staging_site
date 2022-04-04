@@ -243,3 +243,9 @@ hssbirthdefreg@alaska.gov
  <center>
 ![](R:/ABDR/Reporting_Documentation/DHSS4.png "State of Alaska, Department of Health and Human Services, Section of Women's, Children's and Family Health")
 </center>  
+
+```{r echo=FALSE,warning=FALSE, comment = NA, message = FALSE, layout="l-body-outset"}
+
+knitr::include_graphics("R:/ABDR/Reporting_Documentation/DHSS4.png")
+```
+
