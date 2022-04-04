@@ -246,6 +246,6 @@ hssbirthdefreg@alaska.gov
 
 ```{r echo=FALSE,warning=FALSE, comment = NA, message = FALSE, layout="l-body-outset"}
 
-knitr::include_graphics("R:/ABDR/Reporting_Documentation/DHSS4.png")
+knitr::include_graphics("R:/ABDR/Analysis_New/ABDR_CASECONF/cond_reports/Published_reports/abdr_staging_site/images/DHSS4.png")
 ```
 
